@@ -1,0 +1,22 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "CSS and SASS practise",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julikroch/natours-project.git"
+  },
+  "author": "Julian Krochmal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julikroch/natours-project/issues"
+  },
+  "homepage": "https://github.com/julikroch/natours-project#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
