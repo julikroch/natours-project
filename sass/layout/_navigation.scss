@@ -141,4 +141,27 @@
         top: 0;
         transform: rotate(-135deg);
     }
+
+    &__go-to-top{
+        position: fixed;
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        bottom: 4rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 1000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+        text-align: center;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 3rem;
+        padding: 1rem;
+        cursor: pointer;
+        color: $color-grey;
+        transition: all .2s;
+        &:hover{
+            color: $color-primary;
+        }
+    }
 }
