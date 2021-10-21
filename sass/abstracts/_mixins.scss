@@ -1,14 +1,42 @@
 @mixin clearfix {
-    &::after{
+    &::after {
         content: '';
         display: table;
         clear: both;
     }
 }
 
-@mixin absoluteCenter{
+@mixin absoluteCenter {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+//MEDIAQUERYS
+@mixin respond ($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width: 37.5em) {
+            //600px
+            @content
+        }
+    }
+
+    @if $breakpoint==tab-port {
+        @media (max-width: 56.25em) {
+            @content
+        }
+    }
+
+    @if $breakpoint==tab-lansdcape {
+        @media (max-width: 75em) {
+            @content
+        }
+    }
+
+    @if $breakpoint==big-desktop {
+        @media (min-width: 112.5em) {
+            @content
+        }
+    }
 }
