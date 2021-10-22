@@ -16,6 +16,16 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -28,6 +38,16 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 10;
         transition: transform .4s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
@@ -123,26 +143,29 @@
         }
     }
 
-    &__button:hover &__icon::before{
+    &__button:hover &__icon::before {
         top: -1rem;
     }
-    &__button:hover &__icon::after{
+
+    &__button:hover &__icon::after {
         top: 1rem;
     }
 
-    &__checkbox:checked + &__button &__icon{
+    &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
-    &__checkbox:checked + &__button &__icon::before{
+
+    &__checkbox:checked+&__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
-    &__checkbox:checked + &__button &__icon::after{
+
+    &__checkbox:checked+&__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
     }
 
-    &__go-to-top{
+    &__go-to-top {
         position: fixed;
         background-color: $color-white;
         height: 7rem;
@@ -160,7 +183,8 @@
         cursor: pointer;
         color: $color-grey;
         transition: all .2s;
-        &:hover{
+
+        &:hover {
             color: $color-primary;
         }
     }
