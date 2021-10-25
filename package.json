@@ -4,7 +4,10 @@
   "description": "CSS and SASS practise",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions'"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,9 @@
   },
   "homepage": "https://github.com/julikroch/natours-project#readme",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "autoprefixer": "^10.3.7",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.1",
+    "postcss-cli": "^9.0.1"
   }
 }
